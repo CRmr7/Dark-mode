@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Theme Switch Button</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <label class="theme-switch">
+    <input type="checkbox" class="checkbox">
+    <div class="container">
+      <div class="circle-container">
+        <div class="sun-moon-container">
+          <div class="moon">
+            <div class="spot"></div>
+            <div class="spot"></div>
+            <div class="spot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </label>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const checkbox = document.querySelector('.checkbox');
+      checkbox.addEventListener('change', function() {
+        document.body.classList.toggle('dark', checkbox.checked);
+      });
+    });
+  </script>
+</body>
+</html>
